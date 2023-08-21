@@ -52,7 +52,6 @@
 
   /*general styling*/
 
-
   body{
 
     font-size: 1.15rem;
@@ -135,8 +134,14 @@
   }
 
   @media (min-width: 666px){
+
+    body, html{
+    height: 100%;
+    }
+
+
     .results-card{
-        display: grid;
+         display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 46rem;
     }
@@ -215,16 +220,16 @@
 
 
   @media (max-width: 665px){
-    .results-card{
 
-      margin: 0;
+    .results-card{
+       
+      margin: 0;  
       max-width: 100%;
 
       border-radius: 0;
-      
     }
 
-    .results-card-header{
+    .results-card-header {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2rem;
