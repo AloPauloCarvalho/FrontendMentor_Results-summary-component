@@ -61,14 +61,15 @@
 
     display: grid;
     place-content: center;
-
-    height: 100vh;
+    align-items: center;
   }
 
   .results-card{
     max-width: 350px;
     background-color: white;
     border-radius: 2rem;
+
+    margin: 1rem;
 
     overflow: hidden;
   }
@@ -78,7 +79,7 @@
     border-radius: 2rem;
 
     padding: 2rem;
-    gap: 1rem;
+    gap: .65rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -114,19 +115,25 @@
     opacity: 0.65;
   }
 
+  .results-status{
+    margin: .65rem;
+  }
+
   .results-status-word{
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .results-status-text{
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
+    color: hsl(241, 100%, 89%);
     text-align: center;
-
+    max-width: 280px;
   }
 
-  @media (min-width: 600px){
+  @media (min-width: 666px){
     .results-card{
         display: grid;
       grid-template-columns: 1fr 1fr;
@@ -146,6 +153,7 @@
   .sumarry-heading {
     color: var(--clr-primary-navy-blue);
     align-items: flex-start;
+    font-size: 1.5rem;
   }
 
   .bar {
@@ -165,7 +173,7 @@
 
   .bar-text-align{
     display: flex;
-    gap: .3rem;
+    gap: .5rem;
   }
 
   .bar-reaction{
@@ -189,6 +197,7 @@
     width: 100%;
     
     color: white;
+    cursor: pointer;
 
     border: 0;
     border-radius: 8rem;
@@ -196,5 +205,57 @@
     margin: 2rem 0 1rem 0;
 
     background: linear-gradient(180deg, var(--clr-gradient-blue-1) 0%, var(--clr-gradient-blue-2) 100%);
+  }
+
+  .btn:hover, .btn:focus{
+    background-color: hsl(224, 30%, 27%);
+  }
+
+
+
+  @media (max-width: 665px){
+    .results-card{
+
+      margin: 0;
+      max-width: 100%;
+
+      border-radius: 0;
+      
+    }
+
+    .results-card-header{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    padding: 2rem;
+    gap: .65rem;
+
+    max-width: 100%;
+
+    display: grid;
+    }
+
+    .your-result{
+        place-self: center;
+      }
+
+    .results-circle{
+        width: 140px;
+        height: 140px;
+
+        place-self: center;
+    }
+
+    .results-circle-top-number{
+        font-size: 3.5rem;
+      }
+    
+      .results-circle-bottom-number{
+        font-size: 1rem;
+        opacity: 0.65;
+      }
+
   }
 
