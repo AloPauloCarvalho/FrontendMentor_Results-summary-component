@@ -214,7 +214,7 @@
   }
 
   .btn:hover, .btn:focus{
-    background-color: hsl(224, 30%, 27%);
+    background-color: hsl(224, 30%, 27%) !important;
   }
 
 
